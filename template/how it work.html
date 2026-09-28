@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>How It Works - TaskFlow</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            Task<span>Flow</span>
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="{{ url_for('index') }}">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('features') }}">
+                    Features
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('how_it_works') }}">
+                    How It Works
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('login') }}">
+                    Login
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('register') }}"
+                   class="nav-button">
+                    Register
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+</header>
+
+
+<!-- Page Banner -->
+<section class="page-banner">
+
+    <p class="small-title">
+        HOW IT WORKS
+    </p>
+
+    <h1>
+        Manage Your Work In Three Simple Steps
+    </h1>
+
+    <p>
+        TaskFlow makes task management simple, organized,
+        and easy to use.
+    </p>
+
+</section>
+
+
+<!-- Steps Section -->
+<main class="section">
+
+    <div class="steps">
+
+        <!-- Step 1 -->
+        <div class="step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <h3>
+                Create an Account
+            </h3>
+
+            <p>
+                Create your free TaskFlow account by
+                entering your name, email address,
+                and password.
+            </p>
+
+            <a href="{{ url_for('register') }}"
+               class="btn primary">
+                Register
+            </a>
+
+        </div>
+
+
+        <!-- Step 2 -->
+        <div class="step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <h3>
+                Add Your Tasks
+            </h3>
+
+            <p>
+                Add your tasks with deadlines, times,
+                reminders, descriptions, and priorities
+                to stay organized.
+            </p>
+
+            <a href="{{ url_for('get_started') }}"
+               class="btn primary">
+                Get Started
+            </a>
+
+        </div>
+
+
+        <!-- Step 3 -->
+        <div class="step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <h3>
+                Complete Your Tasks
+            </h3>
+
+            <p>
+                Complete your tasks on time and monitor
+                your progress to improve your productivity.
+            </p>
+
+            <a href="{{ url_for('explore_features') }}"
+               class="btn primary">
+                Explore Features
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- Footer -->
+<footer>
+
+    <div class="copyright">
+        &copy; 2026 TaskFlow. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

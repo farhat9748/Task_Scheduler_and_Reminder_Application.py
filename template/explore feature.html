@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Features - TaskFlow</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Task<span>Flow</span>
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="{{ url_for('index') }}">Home</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('features') }}">Features</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('how_it_works') }}">
+                    How It Works
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('login') }}">Login</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('register') }}"
+                   class="nav-button">
+                    Register
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<section class="page-banner">
+
+    <p class="small-title">EXPLORE TASKFLOW</p>
+
+    <h1>Everything You Need To Stay Organized</h1>
+
+    <p>
+        Explore the tools that make managing your
+        daily tasks easier.
+    </p>
+
+</section>
+
+
+<section class="section">
+
+    <div class="explore-grid">
+
+        <div class="explore-card">
+
+            <span>📅</span>
+
+            <h2>Schedule Tasks</h2>
+
+            <p>
+                Plan your work by adding dates and
+                times to every task.
+            </p>
+
+        </div>
+
+
+        <div class="explore-card">
+
+            <span>🔔</span>
+
+            <h2>Set Reminders</h2>
+
+            <p>
+                Never forget an important task or
+                deadline.
+            </p>
+
+        </div>
+
+
+        <div class="explore-card">
+
+            <span>⭐</span>
+
+            <h2>Set Priorities</h2>
+
+            <p>
+                Identify important work using task
+                priorities.
+            </p>
+
+        </div>
+
+
+        <div class="explore-card">
+
+            <span>📊</span>
+
+            <h2>Track Progress</h2>
+
+            <p>
+                See how much work you have completed
+                and stay motivated.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="center-button">
+
+        <a href="{{ url_for('register') }}"
+           class="btn primary">
+            Start Using TaskFlow
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="copyright">
+        © 2026 TaskFlow. All Rights Reserved.
+    </div>
+
+</footer>
+
+</body>
+
+</html>

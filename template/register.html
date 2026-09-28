@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register - TaskFlow</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+    <div class="logo">
+        <a href="{{ url_for('index') }}">TaskFlow</a>
+    </div>
+
+    <div class="nav-links">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('features') }}">Features</a>
+        <a href="{{ url_for('how_it_works') }}">How It Works</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}" class="active">Register</a>
+    </div>
+
+</nav>
+
+</header>
+
+<main class="auth-container">
+
+<div class="auth-card">
+
+    <h1>Create Your Account</h1>
+
+    <p class="auth-subtitle">
+        Join TaskFlow and start managing your tasks
+    </p>
+
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+
+                {% for message in messages %}
+                    <div class="flash-message">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
+            </div>
+        {% endif %}
+    {% endwith %}
+
+
+    <!-- Registration Form -->
+    <form action="{{ url_for('register') }}" method="POST">
+
+        <!-- Name -->
+        <div class="form-group">
+
+            <label for="name">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+            >
+
+        </div>
+
+
+        <!-- Email -->
+        <div class="form-group">
+
+            <label for="email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                required
+            >
+
+        </div>
+
+
+        <!-- Password -->
+        <div class="form-group">
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a password"
+                autocomplete="new-password"
+                minlength="6"
+                required
+            >
+
+        </div>
+
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+
+            <label for="confirm_password">
+                Confirm Password
+            </label>
+
+            <input
+                type="password"
+                id="confirm_password"
+                name="confirm_password"
+                placeholder="Confirm your password"
+                autocomplete="new-password"
+                minlength="6"
+                required
+            >
+
+        </div>
+
+
+        <!-- Terms -->
+        <div class="form-options">
+
+            <label class="remember-me">
+
+                <input
+                    type="checkbox"
+                    name="terms"
+                    required
+                >
+
+                I agree to the terms and conditions
+
+            </label>
+
+        </div>
+
+
+        <!-- Register Button -->
+        <button type="submit" class="btn btn-primary">
+            Create Account
+        </button>
+
+    </form>
+
+
+    <div class="auth-divider">
+        <span>OR</span>
+    </div>
+
+
+    <!-- Login Link -->
+    <p class="register-link">
+
+        Already have an account?
+
+        <a href="{{ url_for('login') }}">
+            Login here
+        </a>
+
+    </p>
+
+</div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 TaskFlow. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
